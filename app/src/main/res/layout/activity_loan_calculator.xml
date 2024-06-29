@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEFFD1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loan Calculator"
+            android:textSize="24sp"
+            android:textColor="#2F712E"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Currency"
+            android:textSize="18sp"
+            android:textColor="#2F712E"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:id="@+id/rbRON"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RON"
+                android:checked="true"
+                android:layout_marginEnd="16dp"
+                android:padding="16dp"/>
+
+            <RadioButton
+                android:id="@+id/rbEUR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EUR"
+                android:padding="16dp"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etLoanAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Loan Amount"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="8dp"
+            android:minHeight="48dp"
+            android:padding="8dp"/>
+
+        <EditText
+            android:id="@+id/etInterestRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Annual Interest Rate (%)"
+            android:inputType="numberDecimal"
+            android:background="@null"
+            android:layout_marginBottom="8dp"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:enabled="false"/>
+
+        <SeekBar
+            android:id="@+id/sbInterestRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etLoanTerm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Loan Term (Months)"
+            android:inputType="number"
+            android:layout_marginBottom="16dp"
+            android:minHeight="48dp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOAN TYPE:"
+            android:textSize="18sp"
+            android:textColor="#2F712E"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spLoanType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/loan_type"
+            android:layout_marginBottom="20dp"
+            android:minHeight="48dp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loan Origination Date"
+            android:textSize="18sp"
+            android:textColor="#2F712E"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvOriginationDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Date"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_background"
+            android:textColor="#2F712E"/>
+
+        <Button
+            android:id="@+id/btnGenerateSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Printable Schedule"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/button_background"
+            android:textColor="#2F712E"/>
+
+        <TextView
+            android:id="@+id/tvMonthlyRepayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monthly Repayment: 0.00$"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            android:textColor="#2F712E"/>
+
+        <TextView
+            android:id="@+id/tvTotalRepayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Repayment: 0.00$"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:textColor="#2F712E"/>
+
+        <TextView
+            android:id="@+id/tvTotalInterest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Interest: 0.00$"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp"
+            android:textColor="#2F712E"/>
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_gravity="start|bottom"
+            android:background="@drawable/button_background"
+            android:textColor="#2F712E"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+</ScrollView>

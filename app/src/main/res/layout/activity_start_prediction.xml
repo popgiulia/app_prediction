@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#EEFFD1"
+    tools:context=".StartPredictionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner"
+        android:padding="16dp"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loan Approval Prediction"
+            android:textSize="24sp"
+            android:textColor="#344E41"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner"
+        android:padding="16dp"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to the Loan Prediction project! \n\n This application is designed to predict whether a loan application will be approved or not based on various parameters. \n\n By analyzing historical data and utilizing machine learning techniques, our model can provide valuable insights into the likelihood of loan approval."
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="#344E41"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Start"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Back"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+</LinearLayout>

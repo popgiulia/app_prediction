@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#EEFFD1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Savings Calculator"
+            android:textSize="24sp"
+            android:textColor="#344E41"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Currency"
+            android:textSize="18sp"
+            android:textColor="#344E41"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/rbRON"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RON"
+                android:checked="true"
+                android:layout_marginEnd="16dp"
+                android:minHeight="48dp"
+                android:padding="12dp"/>
+
+            <RadioButton
+                android:id="@+id/rbEUR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EUR"
+                android:minHeight="48dp"
+                android:padding="12dp"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etInitialAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Initial Amount"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16dp"
+            android:minHeight="48dp"
+            android:padding="12dp"/>
+
+        <EditText
+            android:id="@+id/etMonthlyDeposit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Monthly Deposit"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16dp"
+            android:minHeight="48dp"
+            android:padding="12dp"/>
+
+        <EditText
+            android:id="@+id/etInterestRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Annual Interest Rate (%)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16dp"
+            android:minHeight="48dp"
+            android:padding="12dp"/>
+
+        <EditText
+            android:id="@+id/etMonths"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Number of Months"
+            android:inputType="number"
+            android:layout_marginBottom="16dp"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:textColor="#344E41"/>
+
+        <Button
+            android:id="@+id/btnCalculateSavings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corner"
+            android:padding="16dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/tvGrossEarnings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gross Earnings: $0.00"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:textColor="#344E41"/>
+
+            <TextView
+                android:id="@+id/tvWithholdingTax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Withholding Tax (15%): $0.00"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textColor="#344E41"/>
+
+            <TextView
+                android:id="@+id/tvNetReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Net Return: $0.00"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textColor="#344E41"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_gravity="start|bottom"
+            android:background="@drawable/button_background"
+            android:textColor="#2F712E"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+</ScrollView>
