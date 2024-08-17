@@ -4,8 +4,7 @@ import joblib
 
 app = Flask(__name__)
 
-# Load the trained model
-loaded_model = joblib.load("loan_prediction_model.pkl")
+loaded_model = joblib.load("../loan_prediction_model.pkl")
 
 @app.route('/predict', methods=['POST'])
 def predict_loan_status():
